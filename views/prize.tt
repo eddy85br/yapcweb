@@ -5,7 +5,7 @@ function toggleStatus() {
       $('#radio-list :radio').attr('disabled', false);
       $('#name-candidate :input').attr('disabled', true);
     }
-	
+    
     if ($('#toggle-candidate').is(':checked')) {
       $('#toggle-radio').attr('checked', false);
       $('#radio-list :radio').attr('disabled', true);
