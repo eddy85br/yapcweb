@@ -17,67 +17,60 @@ function toggleStatus() {
 <% languages(session.user_lang) %>
 <section class="full shadow-top" id="inscricoes">
 	<div><!-- wrapper -->
-		<div class="largura12">
-			<!--<center><h3 class="largura6"> Prêmio YAPC::Brasil 2013 </h3></center>-->
+		<div class="largura10">
+			<center><h3>Prêmio YAPC::Brasil 2013</h3></center>
 			<br/><br/>
 		</div>
-
+		
 		<div class="largura12" >
-	
-		<center><h4 style="font-size: 32px;">Prêmio YAPC::Brasil 2013</h4></center>
-
-		<br />
-		<br />
-		
-		Contribuição do candidato para a divulgação da linguagem Perl nesse ano.
-		Contribuição do indicado para a comunidade de programadores Perl, com a criação ou melhorias de módulos do CPAN, em 2013.
-		Criação de empresa ou projeto grande voltados para o uso ou treinamento na linguagem.
-
-		<br/><br/>
-		<br/><br/>
-
-		<form id="vote-form">
-			<label for="voter-name">Seu nome:</label>
-			<input type="text" id="voter-name" placeholder="Seu nome"/>
+			Contribuição do candidato para a divulgação da linguagem Perl nesse ano.<br/>
+			Contribuição do indicado para a comunidade de programadores Perl, com a criação ou melhorias de módulos do CPAN, em 2013.<br/>
+			Criação de empresa ou projeto grande voltados para o uso ou treinamento na linguagem.<br/>
 
 			<br/><br/>
-
-			<label for="voter-rg">RG:</label>
-			<input type="text" id="voter-rg" placeholder="Seu RG"/>
-
 			<br/><br/>
-			<h4>Selecione um candidato na lista abaixo ou indique um novo candidato...</h4><br/>
 
-			<br/>
+			<form id="vote-form">
+				<label for="voter-name">Seu nome:</label>
+				<input type="text" id="voter-name" placeholder="Seu nome"/>
 
-			<input id="toggle-radio" type="radio" name="toggle" onchange="toggleStatus()" checked/> Selecionar candidato já existente:<br/><br/>
-			<p>N.º de</p>
-			<p>Votos:</p>
-			<div id="radio-list">
-				<ul>
-				<% FOREACH n IN name %>
-					<li style="margin-bottom: 15px;"> &nbsp;&nbsp; <% n.replace('.+#','') %> &nbsp;&nbsp;&nbsp;
-					<input type="radio" id="vote-radio" name="vote-radio" value="<% n %>" style=" margin-left: 10px;"> <% n.replace('#\d','') %> </li>
-				<% END %>
-				</ul>
-			</div>
+				<br/><br/>
 
-			<br/><br />
-			<h4>Digite o nome completo do seu candidato (se não estiver na lista acima):</h4>	
+				<label for="voter-rg">RG:</label>
+				<input type="text" id="voter-rg" placeholder="Seu RG"/>
+
+				<br/><br/>
+				<h4>Selecione um candidato na lista abaixo ou indique um novo candidato...</h4><br/>
+
+				<br/>
+
+				<input id="toggle-radio" type="radio" name="toggle" onchange="toggleStatus()" checked/> Selecionar candidato já existente:<br/><br/>
+				<p>N.º de</p>
+				<p>Votos:</p>
+				<div id="radio-list">
+					<ul>
+					<% FOREACH n IN name %>
+						<li style="margin-bottom: 15px;"> &nbsp;&nbsp; <% n.replace('.+#','') %> &nbsp;&nbsp;&nbsp;
+						<input type="radio" id="vote-radio" name="vote-radio" value="<% n %>" style=" margin-left: 10px;"> <% n.replace('#\d','') %> </li>
+					<% END %>
+					</ul>
+				</div>
+
+				<br/><br />
+				<h4>Digite o nome completo do seu candidato (se não estiver na lista acima):</h4>	
 		
-			<br/>
-			<input id="toggle-candidate" type="radio" name="toggle" onchange="toggleStatus()"/> Indicar novo candidato para a lista:
+				<br/>
+				<input id="toggle-candidate" type="radio" name="toggle" onchange="toggleStatus()"/> Indicar novo candidato para a lista:
 
-			<div id="name-candidate">
-			<input type="text" id="vote-candidate" placeholder="Nome do seu indicado ao Prêmio" disabled="disabled"/>
-			</div>
+				<div id="name-candidate">
+				<input type="text" id="vote-candidate" placeholder="Nome do seu indicado ao Prêmio" disabled="disabled"/>
+				</div>
 
-			<br/><br />
+				<br/><br />
 
-			<input type="submit" value="Votar" action="#"/>
-		</form>
-				
-	</div>
+				<input type="submit" value="Votar" action="#"/>
+			</form>			
+		</div><!-- largura12 -->
 	</div><!-- /wrapper -->
 </section><!-- /.full -->
 <hr>
